@@ -10,6 +10,18 @@ public class Book {
     private String bookName;
     private String yearPub;
     private int bookId;
+    private int state;
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+
+
     public String getAuthor() {
         return author;
     }

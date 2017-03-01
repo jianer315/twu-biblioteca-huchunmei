@@ -19,7 +19,7 @@ import java.util.List;
 public class LoginTest {
 
     @Test
-    /*test login*/
+
     public void testLoginCase1()
     {
         String username="huchunmei";
@@ -27,7 +27,7 @@ public class LoginTest {
         int result=LoginAction.Login(username,password);
         assertEquals(1,result);
     }
-@Test
+    @Test
     public void testLoginCase2()
     {
         String username="huchunmei";
