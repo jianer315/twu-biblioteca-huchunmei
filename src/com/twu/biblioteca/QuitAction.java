@@ -8,7 +8,6 @@ import com.twu.serviceImp.GetLoginImp;
 public class QuitAction {
    public void Quit(String username)
    {
-       GetLoginImp getLoginImp=new GetLoginImp();
-       getLoginImp.
+
    }
 }
