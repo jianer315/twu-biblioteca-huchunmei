@@ -7,17 +7,11 @@ import com.twu.bean.Book;
  */
 public class BorrowBookAction {
     public static String BorrowBook(Book book) {
-        if(book.getState()==1)
-        {
+        if (book.getState() == 1) {
             return "borrow books successfully";
-        }
-
-       else
-        {
+        } else {
             return "The book is not for borrow";
         }
-
-
     }
 
 }

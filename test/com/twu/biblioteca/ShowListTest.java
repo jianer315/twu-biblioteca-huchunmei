@@ -1,12 +1,8 @@
 package com.twu.biblioteca;
-
 import com.twu.bean.Book;
-import com.twu.dao.BookDao;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -14,25 +10,32 @@ import static org.junit.Assert.assertEquals;
  */
 public class ShowListTest {
     @Test
-
-    public void testShowListCase1()
-    {
+    public void testShowListSuccess()
+    {   //given
         String option="list books";
         List <Book>booklist=new ArrayList<Book>();
+
+        //when
         booklist=ShowListAction.ShowList(option);
+
+        //then
         for(int i = 0;i<booklist.size();i++){
 
             assertEquals(1,booklist.get(i).getState());
 
         }
     }
-@Test
-    public void testShowListCase2()
-    {
-        String option="null";
-        List <Book>booklist=new ArrayList<Book>();
-        booklist=ShowListAction.ShowList(option);
-        assertEquals(null,booklist);
 
+    @Test
+    public void testShowListFail()
+    {   //given
+        String option="invalid option";
+        List <Book>booklist=new ArrayList<Book>();
+
+        //when
+        booklist=ShowListAction.ShowList(option);
+
+        //then
+        assertEquals(null,booklist);
     }
 }

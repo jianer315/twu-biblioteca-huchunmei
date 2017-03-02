@@ -1,7 +1,5 @@
 package com.twu.biblioteca;
 
-import com.twu.serviceImp.GetLoginImp;
-
 /**
  * Created by Administrator on 2017/2/26.
  */

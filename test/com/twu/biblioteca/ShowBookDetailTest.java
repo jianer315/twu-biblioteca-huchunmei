@@ -14,9 +14,8 @@ import java.util.List;
 public class ShowBookDetailTest {
 
     @Test
-
-    public void testShowBookDetailCase1() {
-
+    public void testShowBookDetail() {
+        //given
         GetBookImp getBookImp=new GetBookImp();
         List <Book>booklist1=new ArrayList<Book>();
         booklist1=getBookImp.getbooklist();
@@ -32,7 +31,11 @@ public class ShowBookDetailTest {
 
         }
         String actual="";
+
+        //when
         String result=ShowBookDetailAction.ShowBookDetail(book.getBookId());
+
+        //then
         Assert.assertEquals(actual+book.getBookName()+book.getAuthor()+book.getYearPub(),result);
     }
 }

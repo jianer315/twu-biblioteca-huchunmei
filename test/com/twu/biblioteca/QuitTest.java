@@ -1,7 +1,5 @@
 package com.twu.biblioteca;
-
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -9,11 +7,14 @@ import static org.junit.Assert.assertEquals;
  */
 public class QuitTest {
     @Test
-
-    public void testQuitCase1()
-    {
+    public void testQuitAction()
+    {   //given
         String username="huchunmei";
+
+        //when
         String result=QuitAction.quit(username);
+
+        //then
         assertEquals("quit successfully",result);
     }
 }

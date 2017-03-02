@@ -20,8 +20,6 @@ public class Book {
         this.state = state;
     }
 
-
-
     public String getAuthor() {
         return author;
     }

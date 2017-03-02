@@ -1,11 +1,8 @@
 package com.twu.biblioteca;
-
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import com.twu.bean.Book;
 import com.twu.serviceImp.GetBookImp;
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +12,8 @@ import java.util.List;
 public class ReturnBookTest {
     @Test
 
-    public void testBorrowBookCase1() {
-
+    public void testReturnBookSuccess() {
+        //given
         GetBookImp getBookImp=new GetBookImp();
         List<Book> booklist1=new ArrayList<Book>();
         booklist1=getBookImp.getbooklist();
@@ -32,22 +29,25 @@ public class ReturnBookTest {
 
         }
 
+        //when
         String result= ReturnBookAction.ReturnBook(book);
-        Assert.assertEquals("return books successfully",result);
 
+        //then
+        Assert.assertEquals("return books successfully",result);
     }
 
     @Test
-
-    public void testBorrowBookCase2() {
-
+    public void testReturnBookFail() {
+        //given
         Book book=new Book();
         book.setBookId(1);
         book.setBookName("nonono");
+
+        //when
         String result= ReturnBookAction.ReturnBook(book);
+
+        //then
         Assert.assertEquals("The book is not in the library",result);
 
     }
-
-
 }

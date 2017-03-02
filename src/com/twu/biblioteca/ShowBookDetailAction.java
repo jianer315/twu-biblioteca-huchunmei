@@ -12,19 +12,15 @@ import java.util.List;
 public class ShowBookDetailAction {
     public static String ShowBookDetail(int bookId) {
         GetBookImp getBookImp=new GetBookImp();
-        List<Book> booklist1=new ArrayList<Book>();
-        String detail="";
-        booklist1=getBookImp.getbooklist();
-        for(int i = 0;i<booklist1.size();i++){
-
-            if(booklist1.get(i).getBookId()==bookId)
-            {
-                detail=booklist1.get(i).getBookName()+booklist1.get(i).getAuthor()+booklist1.get(i).getYearPub();
-                //System.out.println("console"+book.getState());
-               break;
+        List<Book> booklist=new ArrayList<Book>();
+        String detail= "";
+        booklist = getBookImp.getbooklist();
+        for (int i = 0; i < booklist.size(); i++) {
+            if (booklist.get(i).getBookId() == bookId) {
+                detail = booklist.get(i).getBookName() + booklist.get(i).getAuthor() + booklist.get(i).getYearPub();
+                break;
             }
-
         }
-        return  detail;
+        return detail;
     }
 }
