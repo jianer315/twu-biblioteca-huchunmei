@@ -11,13 +11,13 @@ import java.util.List;
  */
 public class ShowBookDetailAction {
     public static String ShowBookDetail(int bookId) {
-        GetBookImp getBookImp=new GetBookImp();
-        List<Book> booklist=new ArrayList<Book>();
-        String detail= "";
+        GetBookImp getBookImp = new GetBookImp();
+        List<Book> booklist = new ArrayList<Book>();
+        String detail = "";
         booklist = getBookImp.getbooklist();
         for (int i = 0; i < booklist.size(); i++) {
             if (booklist.get(i).getBookId() == bookId) {
-                detail = booklist.get(i).getBookName() + booklist.get(i).getAuthor() + booklist.get(i).getYearPub();
+                detail = booklist.get(i).getBookName() + " " + booklist.get(i).getAuthor() + " " + booklist.get(i).getYearPub();
                 break;
             }
         }

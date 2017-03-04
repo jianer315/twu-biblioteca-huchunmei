@@ -1,13 +1,9 @@
 package com.twu.biblioteca;
 
-import com.twu.bean.Book;
 import com.twu.bean.Movie;
-import com.twu.service.GetMovie;
-import com.twu.serviceImp.GetBookImp;
 import com.twu.serviceImp.GetMovieImp;
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +33,6 @@ public class ShowMovieDetailTest {
         String result=ShowMovieDetailAction.ShowMovieDetail(movie.getId());
 
         //then
-        Assert.assertEquals(actual+movie.getMoviename()+movie.getMovieyear()+movie.getDirector()+movie.getRating(),result);
+        Assert.assertEquals(actual+movie.getMoviename()+" "+movie.getMovieyear()+" "+movie.getDirector()+" "+movie.getRating(), result);
     }
 }

@@ -1,56 +1,62 @@
 package com.twu.biblioteca;
+
 import org.junit.Assert;
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
+
 public class LoginTest {
 
     @Test
-    public void testLoginActionSuccess()
-    {   //given
-        String username="no-1";
-        String password="12345612";
+    public void testLoginActionSuccess() {
+        //given
+        String account = "no-1";
+        String password = "12345612";
 
         //when
-        int result=LoginAction.Login(username,password);
+        String result = LoginAction.Login(account, password);
 
         //then
-        assertEquals(1,result);
+        assertEquals("Login Successfully", result);
     }
+
     @Test
-    public void testLoginActionFail1()
-    {   //given
-        String username="huhu";
-        String password="";
+    public void testLoginActionFail1() {
+        //given
+        String account = "huhu";
+        String password = "";
 
         //when
-        int result=LoginAction.Login(username,password);
+        String result = LoginAction.Login(account, password);
 
         //then
-        Assert.assertEquals(0,result);
+        Assert.assertEquals("Login fail", result);
     }
+
     @Test
-    public void testLoginActionFail2()
-    {   //given
-        String username="hu";
-        String password="123456";
+    public void testLoginActionFail2() {
+        //given
+        String account = "hu";
+        String password = "123456";
 
         //when
-        int result=LoginAction.Login(username,password);
+        String result = LoginAction.Login(account, password);
 
         //then
-        Assert.assertEquals(0,result);
+        Assert.assertEquals("Login fail", result);
     }
+
     @Test
-    public void testLoginActionFail3()
-    {   //given
-        String username="hu";
-        String password="";
+    public void testLoginActionFail3() {
+        //given
+        String account = "hu";
+        String password = "";
 
         //when
-        int result=LoginAction.Login(username,password);
+        String result = LoginAction.Login(account, password);
 
         //then
-        Assert.assertEquals(0,result);
+        Assert.assertEquals("Login fail", result);
     }
 
 }

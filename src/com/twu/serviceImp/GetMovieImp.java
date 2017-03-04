@@ -28,11 +28,11 @@ public class GetMovieImp implements GetMovie {
         movie2.setRating(5);
 
         Movie movie3=new Movie();
-        movie2.setId(3);
-        movie2.setMoviename("xijuzhiwang");
-        movie2.setDirector("zhouxingchi");
-        movie2.setMovieyear("2001");
-        movie2.setRating(9);
+        movie3.setId(3);
+        movie3.setMoviename("xijuzhiwang");
+        movie3.setDirector("zhouxingchi");
+        movie3.setMovieyear("2001");
+        movie3.setRating(9);
         movieList.add(movie1);
         movieList.add(movie2);
         movieList.add(movie3);

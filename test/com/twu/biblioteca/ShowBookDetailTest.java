@@ -16,26 +16,24 @@ public class ShowBookDetailTest {
     @Test
     public void testShowBookDetail() {
         //given
-        GetBookImp getBookImp=new GetBookImp();
-        List <Book>booklist1=new ArrayList<Book>();
-        booklist1=getBookImp.getbooklist();
-        Book book=new Book();
-        for(int i = 0;i<booklist1.size();i++){
+        GetBookImp getBookImp = new GetBookImp();
+        List<Book> booklist1 = new ArrayList<Book>();
+        booklist1 = getBookImp.getbooklist();
+        Book book = new Book();
+        for (int i = 0; i < booklist1.size(); i++) {
 
-            if(booklist1.get(i).getState()==1)
-            {
-                book=booklist1.get(i);
-                //System.out.println("console"+book.getState());
+            if (booklist1.get(i).getState() == 1) {
+                book = booklist1.get(i);
                 break;
             }
 
         }
-        String actual="";
+        String actual = "";
 
         //when
-        String result=ShowBookDetailAction.ShowBookDetail(book.getBookId());
+        String result = ShowBookDetailAction.ShowBookDetail(book.getBookId());
 
         //then
-        Assert.assertEquals(actual+book.getBookName()+book.getAuthor()+book.getYearPub(),result);
+        Assert.assertEquals(actual + book.getBookName() + " " + book.getAuthor() + " " + book.getYearPub(), result);
     }
 }

@@ -47,11 +47,13 @@ public class GetUserImp implements GetUser {
         User user5=new User();
         user5.setRole("admin");
         user5.setLibnumber("no-admin");
+        user5.setPassword("123");
 
         userList.add(user1);
         userList.add(user2);
         userList.add(user3);
         userList.add(user4);
+        userList.add(user5);
         return userList;
     }
 }

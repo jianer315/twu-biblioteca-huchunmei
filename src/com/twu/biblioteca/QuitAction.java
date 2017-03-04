@@ -6,13 +6,11 @@ package com.twu.biblioteca;
 public class QuitAction {
 
 
-   public static String quit(String username) {
+    public static String quit(String username) {
 
-      if(username=="huchunmei")
-      {
-         return "quit successfully";
-      }
-      else
-         return "";
-   }
+        if (username == "no-1") {
+            return "quit successfully";
+        } else
+            return "";
+    }
 }

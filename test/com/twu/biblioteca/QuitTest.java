@@ -9,10 +9,10 @@ public class QuitTest {
     @Test
     public void testQuitAction()
     {   //given
-        String username="huchunmei";
+        String account="no-1";
 
         //when
-        String result=QuitAction.quit(username);
+        String result=QuitAction.quit(account);
 
         //then
         assertEquals("quit successfully",result);

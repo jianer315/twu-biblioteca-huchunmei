@@ -1,8 +1,6 @@
 package com.twu.biblioteca;
 
-import com.twu.bean.Book;
 import com.twu.bean.Movie;
-import com.twu.service.GetMovie;
 import com.twu.serviceImp.GetMovieImp;
 import org.junit.Test;
 

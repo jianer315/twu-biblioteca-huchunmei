@@ -9,26 +9,27 @@ import static org.junit.Assert.assertEquals;
  */
 public class ViewAccountInfoTest {
     @Test
-    public void testViewAccountInfoOk()
-    {   //given
-        String account="no-1";
-        String Info="huhu 99999@qq.com 1111111";
+    public void testViewAccountInfoOk() {
+        //given
+        String account = "no-1";
+        String Info = "huhu 99999@qq.com 1111111";
 
         //when
-        String result=ViewAccountInfoAction.ViewAccountInfo(account);
+        String result = ViewAccountInfoAction.ViewAccountInfo(account);
 
         //then
-        assertEquals(Info,result);
+        assertEquals(Info, result);
     }
+
     @Test
-    public void testViewAccountInfoFail()
-    {   //given
-        String account="no-3";
+    public void testViewAccountInfoFail() {
+        //given
+        String account = "no-3";
 
         //when
-        String result=ViewAccountInfoAction.ViewAccountInfo(account);
+        String result = ViewAccountInfoAction.ViewAccountInfo(account);
 
         //then
-        assertEquals("please login",result);
+        assertEquals("please login", result);
     }
 }

@@ -1,10 +1,7 @@
 package com.twu.biblioteca;
-import com.twu.bean.Book;
-import com.twu.serviceImp.GetBookImp;
+
 import org.junit.Assert;
 import org.junit.Test;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by cmhu on 01/03/2017.
@@ -13,39 +10,40 @@ public class ReturnBookTest {
     @Test
     public void testReturnBookSuccess() {
         //given
-        GetBookImp getBookImp=new GetBookImp();
-        List<Book> booklist1=new ArrayList<Book>();
-        booklist1=getBookImp.getbooklist();
-        Book book=new Book();
-        for(int i = 0;i<booklist1.size();i++){
-
-            if(booklist1.get(i).getState()==2)
-            {
-                book=booklist1.get(i);
-                break;
-            }
-
-        }
+        int bookid = 1;
+        String account = "no-2";
 
         //when
-        String result= ReturnBookAction.ReturnBook(book);
+        String result = ReturnBookAction.ReturnBook(account, bookid);
 
         //then
-        Assert.assertEquals("return books successfully",result);
+        Assert.assertEquals("return books successfully", result);
     }
 
     @Test
     public void testReturnBookFail() {
         //given
-        Book book=new Book();
-        book.setBookId(1);
-        book.setBookName("nonono");
+        int bookid = 1000;
+        String account = "no-1";
 
         //when
-        String result= ReturnBookAction.ReturnBook(book);
+        String result = ReturnBookAction.ReturnBook(account, bookid);
 
         //then
-        Assert.assertEquals("The book is not in the library",result);
+        Assert.assertEquals("The book is not in the library", result);
 
+    }
+
+    @Test
+    public void testReturnBookNotLogin() {
+        //given
+        int bookid = 5;
+        String account = "no-3";
+
+        //when
+        String result = ReturnBookAction.ReturnBook(account, bookid);
+
+        //then
+        Assert.assertEquals("please login", result);
     }
 }
