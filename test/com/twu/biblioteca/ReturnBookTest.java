@@ -11,7 +11,6 @@ import java.util.List;
  */
 public class ReturnBookTest {
     @Test
-
     public void testReturnBookSuccess() {
         //given
         GetBookImp getBookImp=new GetBookImp();
@@ -23,7 +22,6 @@ public class ReturnBookTest {
             if(booklist1.get(i).getState()==2)
             {
                 book=booklist1.get(i);
-                //System.out.println("console"+book.getState());
                 break;
             }
 

@@ -8,15 +8,15 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by cmhu on 01/03/2017.
  */
-public class ShowListTest {
+public class ShowBookListTest {
     @Test
-    public void testShowListSuccess()
+    public void testShowBookListSuccess()
     {   //given
         String option="list books";
         List <Book>booklist=new ArrayList<Book>();
 
         //when
-        booklist=ShowListAction.ShowList(option);
+        booklist= ShowBookListAction.ShowList(option);
 
         //then
         for(int i = 0;i<booklist.size();i++){
@@ -27,13 +27,13 @@ public class ShowListTest {
     }
 
     @Test
-    public void testShowListFail()
+    public void testShowBookListFail()
     {   //given
         String option="invalid option";
         List <Book>booklist=new ArrayList<Book>();
 
         //when
-        booklist=ShowListAction.ShowList(option);
+        booklist= ShowBookListAction.ShowList(option);
 
         //then
         assertEquals(null,booklist);

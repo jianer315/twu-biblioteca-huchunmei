@@ -7,8 +7,8 @@ public class LoginTest {
     @Test
     public void testLoginActionSuccess()
     {   //given
-        String username="huchunmei";
-        String password="123456";
+        String username="no-1";
+        String password="12345612";
 
         //when
         int result=LoginAction.Login(username,password);
@@ -19,7 +19,7 @@ public class LoginTest {
     @Test
     public void testLoginActionFail1()
     {   //given
-        String username="huchunmei";
+        String username="huhu";
         String password="";
 
         //when

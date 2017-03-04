@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by cmhu on 01/03/2017.
  */
-public class ShowListAction {
+public class ShowBookListAction {
     public static List<Book> ShowList(String option) {
 
         if (option.equals("list books")) {

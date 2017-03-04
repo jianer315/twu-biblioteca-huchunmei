@@ -23,7 +23,6 @@ public class BorrowBookTest {
             if(booklist.get(i).getState()==1)
             {
                 book=booklist.get(i);
-                //System.out.println("console"+book.getState());
                 break;
             }
 
